@@ -1,0 +1,16 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+Files: 
+
+lab1b-server.c
+C source code for the server program. It connects to the client through the --shell=program option. 
+
+lab1b-client.c
+C source code for the client program. It connects to the server on the specified port. 
+
+
+Makefile
+Contains the commands that compile lab1b-server.c and lab1b-client.c, and compress all the files into a tarball. And it will clean up previous edition file before building up new one. 
+
