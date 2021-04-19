@@ -1,0 +1,9 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+Lab1a.c
+C source code. It changes the terminal to character-at-a-time, no echo mode. 
+
+Makefile
+Contains the commands that compile lab1a.c, and compress all the files into a tarball. Finally, it clean up. 
