@@ -1,0 +1,15 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+S/N: BBGW18031213
+MAC: 2CF7F10678BC
+
+Files: 
+- my_beaglebone.jpg: a selfie of my holding assembled Beaglebone
+- connected.png: a screenshot from a USB terminal command session connected to my system. 
+- copy.png: a screen shot from Cyberduck in which I copied my hello world program to my BeagleBone
+- build_run.png: a screen shot of my WiFi SSH session where I compiled the hello world program
+- git.png: a screen shot from a WIFI SSH session in which you install git and clone a repository.
+- Makefile: the makefile containing a default target for building the tarball, and a clean target to remove said tarball
+- README: a file to state the contained files in the tar. (This one) 

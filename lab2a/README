@@ -1,0 +1,54 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+Files: 
+- lab2_add.c: A C source file add and subtract from a global counter. 
+- lab2_list.c: A C source file that implement and test a multithreaded program. Adds and deletes elements from a universally linked list.
+- SortedList.c: A C module that implements the 4 functions which are specified in the SortedList.h. 
+- SortdList.h： A header file provided from the class material. 
+- lab2_add.csv: A data file that contains the result for Part1
+- lab2_list.csv: A data file that contains the result for Part2
+- lab2_add.gp: Creates the graphs of the add function
+- lab2_list.gp: Creates the graphs of the list function.
+- Makefile: the commands that build the tar file. Build the deliverable programs, output, graphs, and tarball. 
+- Some .png files: graphs of the data which are obtained from the functions in the project.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.1.1 - causing conflicts:
+
+As the number of iterations increase, there would be more opportunities that data races happen. In other words,\
+ if the iterations are few, it would be lower chance to have error. 
+This is also why a small number of iterations will have few chances for race conditions to occur and therefore will seldom fail. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.1.2 - cost of yielding:
+
+The reason why the --yield runs so much slower: Each thread is required to yield immediately. Every time when performing an add or subtract operation, a context switch would be forced to occur and pass the CPU to another thread. It take a lot of time. 
+The additional time is going toward switching between threads. When a context switch occurs in the critical section, the failure occur. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.1.3 - measurement errors:
+
+The reason why average cost per operation drops with increasing iterations: As the increasing iterations, the overheads of the operations become insignificant to the total runtime. 
+Through the graph of the result of running the test with large number of iterations, we may find a stable level of the cost. So we can know what is the "correct cost". 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.1.4 - costs of serialization:
+
+For low numbers of threads, there is no much locking or context switch occur. So these threads behave similarly. 
+As the number of threads increases, the overheads of threads will be more, so it takes more waiting time for licks to be releases. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.2.1 - scalability of Mutex
+In general, the rate of increase in Part-1 test is slightly lower than Part-2. 
+When the timer per operation for Part-2 grows linearly, the time per operation for Part-1 test increase at decreasing rate. In Part-1, the critical section is smaller than Part-2, so that the waiting time contributes small amount to the total time. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.2.2 - scalability of spin locks
+
+For both mutex and spin locks protected operations, the variation in time per protected operation increase linearly as the number of threads increase. 
+At the beginning, the cost curve for spin locks is slightly lower than the curve for mutex. As the number of threads increase, the situation change. 
+It means that for low number of threads , the cost for spin lock is less that mutex. However, for larger number of threads, the cost of mutex would be less than spin lock. 
+
+

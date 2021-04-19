@@ -1,0 +1,16 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+S/N: BBGW18031213
+MAC: 2CF7F10678BC
+
+Files: 
+
+- lab4b.c: a C module file for Beaglebone temperature sensor program. 
+
+- Makefile: the makefile containing a default target for building the tarball, and a clean target to remove said tarball
+
+- README: a file to state the contained files in the tar. (This one) 
+
+- smoketest.sh: a script that contains all test cases for smoke check

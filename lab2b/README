@@ -1,0 +1,48 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+Files: 
+- lab2_add.c: A C source file add and subtract from a global counter. 
+- lab2_list.c: A C source file that implement and test a multithreaded program. Adds and deletes elements from a universally linked list.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.3.1 - CPU time in the basic list implementation:
+
+I believe most of the cycles in the 1 and 2 thread list tests are spend in operating lists. The most of the CPU time is spend inserting and deleting elements from the sorted list. 
+In the high-thread spin-lock tests, I believe most of time is spent in the oepration for waiting the spin-lock to be released. 
+In the high-thread mutex tests, I believe most of the CPU time is spent in the mutex functions. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.3.2 - Execution Profiling:
+
+The while loop that waits for the spin-lock to be available take the most amount of CPU time:
+'''
+while (__sync_lock_test_and_set(lock + hash, 1));
+while (__sync_lock_test_and_set(lock + i, 1));
+'''
+When the number of threads is large, the cost of CPU time is large. The operations will become more expensive as the number of threads increase. Since it means there would be more threads waiting for the same locks and spend more time in the while loop. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.3.3 - Mutex Wait Time:
+
+The average lock-wait time rises dramatically as the number of threads increase. Since more threads means waiting for the same number of locks means the the waiting time of each thread will also increase. Since is more competition among them.
+
+The completion time per operation rise as the number of contending threads because there are more threads that need to perform the operations. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+QUESTION 2.3.4 - Performance of Partitioned Lists
+
+
+The change in performance: As the number of lists increase, the performance will be improved. 
+The throughput should continue increasing as the number of lists is further increased. 
+Does not appear to be true. An N-partitioned list has a lower throughput than a single list with less number of inserts.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+

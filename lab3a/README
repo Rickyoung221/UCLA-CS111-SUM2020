@@ -1,0 +1,26 @@
+#NAME: Zhirong Wang,weikeng yang
+#EMAIL: zwang40@mail.ccsf.edu,weikengyang@gmail.com
+#ID: 105179351,405346443
+
+
+lab3a.c: 
+	C source file that builds a program to display information
+	about the ext2 file system. 
+
+Makefile: 
+	Makefile that includes targets for building and compiling our 
+	lab3a.c program, generating the deliverable tarball(dist), and 
+	deleting the unnecessary files (clean).
+
+ext2_fs.h: 
+	Header file of a simplified version of a Linux ext2 file system.
+
+README: 
+	This file. Information of files for submission
+
+References:
+
+Superblock Structure: 
+http://www.linfo.org/superblock
+https://cs.nyu.edu/courses/spring09/V22.0202-002/lectures/lecture-24.html
+https://stackoverflow.com/questions/26879008/difference-between-u8-uint8-t-u8-and-be8
