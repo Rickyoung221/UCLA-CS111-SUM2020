@@ -1,0 +1,18 @@
+NAME: Weikeng Yang
+EMAIL: weikengyang@gmail.com
+ID: 405346443
+
+S/N: BBGW18031213
+MAC: 2CF7F10678BC
+
+Files: 
+
+- lab4c_tcp.c: a C module file to establish a connection to the server and sends messages to and from the server without encryption.
+
+- lab4c_tls.c: a C module file to establish a connection to the server and sends messages to and from the server with encryption.
+
+- Makefile: the makefile containing a default target for building the tarball, and a clean target to remove said tarball
+
+- README: a file to state the contained files in the tar. (This one) 
+
+- smoketest.sh: a script that contains all test cases for smoke check

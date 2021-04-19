@@ -1,0 +1,30 @@
+# NAME:	Weikeng Yang
+# EMAIL: weikengyang@gmail.com
+# ID:    405346443
+
+Files included in lab0-405346443.tar.gz :
+- lab0.c: the C source code file that can copies its standard input to its standard output
+- Makefile: which contains all targets for making and running the different parts of the project
+- backtrace.png: a screen snapshot of a segmentation fault and associated stack-trace
+- breakpoint.png: a screen snapshot of gdb output about breakpoints and variable inspection.
+- SmokeTest.sh: a bash script for testing if the program runs properly. 
+
+Test cases in SmokeTest.sh:
+1) Ran the program with an input file (included in the 
+distrubtion file), create an output file, and see that the program
+exited with an exit code of 0.
+
+2) Compared that the input file and the output file had the
+same content after the program was run.
+
+3) Ensured that the correct error is thrown when unable to write
+to the output file by creating and output file, removing its
+write permissions, and then attempting to run the program with that
+file as the output file.
+
+4) Check that the segfault handler works by running with both
+--segfault and --catch options.
+
+5) Attempt to run the program with an input file that doesn't exist
+to check that the correct error is thrown when attempting to open
+the file.
